@@ -1,0 +1,12 @@
+<ion-view view-title="散点图">
+  <ion-content>
+    <div class="card">
+      <div class="item item-divider">
+        {{title}}
+      </div>
+      <div class="item" style="padding: 0px">
+       <ng-echarts ng-style="{ 'width' : width, 'height' : height }" ec-config="config" ec-option="option"></ng-echarts>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
