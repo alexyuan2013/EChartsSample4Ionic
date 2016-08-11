@@ -68,6 +68,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ng-echarts'])
       }
     }
   })
+  .state('app.slider', {
+    url: '/slider',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/slider.html',
+        controller: 'SliderCtrl'
+      }
+    }
+  })
   ;
 
   
