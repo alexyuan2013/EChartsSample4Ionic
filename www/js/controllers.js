@@ -38,6 +38,7 @@ angular.module('starter.controllers', [])
                 right: 10,
                 data: ['1990', '2015']
             },
+            tooltip: {triggerOn: 'click'},
             grid: { x: '10%', y: '3%', width: '85%', height: '90%' },
             xAxis: {
                 splitLine: {
