@@ -1,5 +1,6 @@
 <ion-view view-title="滑动切换">
   <ion-content>
+    
     <ion-slides options="options" slider="data.slider">
       <ion-slide-page>
         <div class="card" style="margin:0px">
@@ -31,6 +32,32 @@
           </div>
         </div>
       </ion-slide-page>
+      <ion-slide-page>
+        <ion-scroll zooming="true" direction="y" style="height: 300px">
+        <div class="list" ng-style="tableStyle">
+          <div class="item item-divider">
+            学院能耗
+          </div>
+          <div class="row">
+            <div class="col col-20">单位名称</div>
+            <div class="col col-20">用电量(万kw·h)</div>
+            <div class="col col-20">用水量(吨)</div>
+            <div class="col col-20">用气量(吨)</div>
+            <div class="col col-20">新能源发电量(万kw·h)</div>
+          </div>
+          <ion-list>
+            <ion-item class="item row" ng-repeat="item in items">
+              <div class="col col-20">{{item.name}}</div>
+              <div class="col col-20">{{item.power}}</div>
+              <div class="col col-20">{{item.water}}</div>
+              <div class="col col-20">{{item.gas}}</div>
+              <div class="col col-20">{{item.nPower}}</div>
+            </ion-item>
+          </ion-list>
+        </div>
+         </ion-scroll>
+      </ion-slide-page>
     </ion-slides>
+   
   </ion-content>
 </ion-view>

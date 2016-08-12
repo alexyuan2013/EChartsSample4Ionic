@@ -340,6 +340,7 @@ angular.module('starter.controllers', [])
             loop: false,
             effect: 'fade',
             speed: 500,
+            autoHeight: true,
         }
 
         var chartOptions1 = {
@@ -526,7 +527,18 @@ angular.module('starter.controllers', [])
                 chart3.setOption(chartOptions3, true);
             }
 
-
+            $scope.items = [{ name: '商学院', power: 1000, water: 500, gas: 50, nPower: 100 },
+                { name: '土木', power: 1000, water: 500, gas: 50, nPower: 100 },
+                { name: '电气', power: 1000, water: 500, gas: 50, nPower: 100 },
+                { name: '建筑', power: 1000, water: 500, gas: 50, nPower: 100 },
+                { name: '水利', power: 1000, water: 500, gas: 50, nPower: 100 },
+                { name: '土木', power: 1000, water: 500, gas: 50, nPower: 100 },
+                { name: '电气', power: 1000, water: 500, gas: 50, nPower: 100 },
+                { name: '建筑', power: 1000, water: 500, gas: 50, nPower: 100 },
+                { name: '水利', power: 1000, water: 500, gas: 50, nPower: 100 },
+                { name: '地科', power: 1000, water: 500, gas: 50, nPower: 100 }
+                ];
+            $scope.tableStyle = {"background": "#FFFFFF", "height":$scope.items.length*37 + 100 +"px" };
 
         });
 
