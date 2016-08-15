@@ -498,7 +498,10 @@ angular.module('starter.controllers', [])
         $scope.$on("$ionicSlides.sliderInitialized", function (event, data) {
             // data.slider is the instance of Swiper
             $scope.slider = data.slider;
-            var chart1Dom = document.getElementById("chart1");
+            //var chart1Dom = document.getElementById("chart1");
+            //使用angular的方式获取dom元素
+            //angular.element()得到的是jquery的object，必须使用[0]的方式转化为raw dom才能被echarts使用
+            var chart1Dom = angular.element(document.querySelector('#chart1'))[0];
             chart1Dom.style.width = width;
             chart1Dom.style.height = height;
             var chart1 = echarts.init(chart1Dom);
