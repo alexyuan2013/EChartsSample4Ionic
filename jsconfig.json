@@ -1,1 +1,9 @@
-{}
+{
+  "exclude": [
+        "platforms",
+        "plugins",
+        "resources",
+        "scss",
+        "hooks"
+    ]
+}
